@@ -10,6 +10,11 @@ export default class TodoItem extends Component {
             editing: true,
           })
       }
+      handleUpdatedDone = event => {
+        if (event.key === "Enter") {
+            this.setState({ editing: false })
+          }
+      }
   render() {
     const completedStyle = {
       fontStyle: 'italic',
@@ -38,7 +43,16 @@ if (this.state.editing) {
         <button onClick={() => this.props.deleteTodoProps(id)}>Delete</button>
         <span style={completed ? completedStyle : null}>{title}</span>
           </div>
-          <input type="text" style={editMode} className={styles.textInput} />
+          <input
+  type="text"
+  style={editMode}
+  className={styles.textInput}
+  value={title}
+  onChange={e => {
+    this.props.setUpdate(e.target.value, id)
+  }}
+  onKeyDown={this.handleUpdatedDone}
+/>
       </li>
     );
   }
