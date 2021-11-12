@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 export default class InputTodo extends Component {
+  /*eslint-disable*/
     state = {
       title: '',
     };
