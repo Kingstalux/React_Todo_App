@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). In this project, I created a todo list where a user can add, edit and remove tasks. The user data is stored in the local storage and the project was first created with classes, then refactored to hooks.
 
 ## Available Scripts
 
